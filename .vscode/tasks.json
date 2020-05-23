@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Code",
+      "type": "shell",
+      "command": "flutter packages pub run build_runner build --delete-conflicting-outputs"
+    },
+    {
+      "label": "Force build iOS simulator",
+      "type": "shell",
+      "command": "flutter build ios --simulator"
+    },
+    {
+      "label": "Build iOS simulator",
+      "type": "shell",
+      "command": "if [ -r 'build/ios/Debug-iphonesimulator/Runner.app' ]; then else; flutter build ios; fi;"
+    }
+  ]
+}

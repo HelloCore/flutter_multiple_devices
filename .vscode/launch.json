@@ -14,6 +14,36 @@
         "--use-application-binary",
         "build/ios/Debug-iphonesimulator/Runner.app"
       ]
+    },
+    {
+      "name": "Flutter: old ios binary iPhone 8",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--use-application-binary",
+        "build/ios/Debug-iphonesimulator/Runner.app"
+      ],
+      "deviceId": "iPhone 8"
+    },
+    {
+      "name": "Flutter: old ios binary iPhone 11",
+      "request": "launch",
+      "type": "dart",
+      "args": [
+        "--use-application-binary",
+        "build/ios/Debug-iphonesimulator/Runner.app"
+      ],
+      "deviceId": "iPhone 11"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Simulators",
+      "preLaunchTask": "Build iOS simulator",
+      "configurations": [
+        "Flutter: old ios binary iPhone 8",
+        "Flutter: old ios binary iPhone 11"
+      ]
     }
   ]
 }
